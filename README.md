@@ -5,6 +5,7 @@ After installing Docker for Mac, please verify the information below.
 Note: $ is the prompt. Ignore it and copy the rest of the line.
 
 ```$docker --version```
+
 ```Docker version 17.09.0-ce, build afdb6d4```
 
 
