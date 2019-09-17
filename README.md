@@ -31,8 +31,8 @@ Up 2 minutes (healthy)   0.0.0.0:3306->3306/tcp, 33060/tcp   mysql
 
 Log into MySQL within the docker container using the docker exec command:
 
-
-```$docker exec -it "CONTAINER ID" bin/bash
+```
+$docker exec -it "CONTAINER ID" bin/bash
 bash-4.2# mysql -uroot -p"password"
 mysql>
 ```
@@ -41,8 +41,8 @@ Remember, when we created and ran the MySQL container, we provided MYSQL_ROOT_PA
 Create a database and user, and grant privileges in MySQL (from within the container).
 Log into MySQL if you haven't already. After login, the mysql> prompt shows up:
 
-
-```bash-4.2# mysql -uarun -p"password"
+```
+bash-4.2# mysql -uarun -p"password"
 mysql>
 ```
 
@@ -50,8 +50,8 @@ mysql>
 I create a user named arun, grant all privileges, and quit. 
 Important: This step is required to log into MySQL from outside the container. The root user will not be able to log in from the host OS (Mac OS). Use % instead of localhost in arun@localhost.
 
-
-```mysql> CREATE USER 'arun'@'%' IDENTIFIED BY 'password';
+```
+mysql> CREATE USER 'arun'@'%' IDENTIFIED BY 'password';
 Query OK, 0 rows affected (0.00 sec)
 mysql> GRANT ALL PRIVILEGES ON * . * TO 'arun'@'%';
 Query OK, 0 rows affected (0.00 sec)
