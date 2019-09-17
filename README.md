@@ -9,8 +9,11 @@ Note: $ is the prompt. Ignore it and copy the rest of the line.
 ```Docker version 17.09.0-ce```
 
 Build yours dockeer image.
+
 ```$docker build -t "choise a name" .```
+
 Run the MySQL image using the docker run command.
+
 ```$docker run -d -p3306:3306```
 
 
@@ -28,6 +31,7 @@ Up 2 minutes (healthy)   0.0.0.0:3306->3306/tcp, 33060/tcp   mysql
 
 Log into MySQL within the docker container using the docker exec command:
 
+
 ```$docker exec -it "CONTAINER ID" bin/bash
 bash-4.2# mysql -uroot -p"password"
 mysql>
@@ -37,6 +41,7 @@ mysql>
 Remember, when we created and ran the MySQL container, we provided MYSQL_ROOT_PASSWORD=password that was defined in Dockerfile.
 Create a database and user, and grant privileges in MySQL (from within the container).
 Log into MySQL if you haven't already. After login, the mysql> prompt shows up:
+
 
 ```bash-4.2# mysql -uarun -ppassword
 mysql>
