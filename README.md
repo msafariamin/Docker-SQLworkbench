@@ -37,15 +37,15 @@ bash-4.2# mysql -uroot -p"password"
 mysql>
 ```
 
-
 Remember, when we created and ran the MySQL container, we provided MYSQL_ROOT_PASSWORD=password that was defined in Dockerfile.
 Create a database and user, and grant privileges in MySQL (from within the container).
 Log into MySQL if you haven't already. After login, the mysql> prompt shows up:
 
 
-```bash-4.2# mysql -uarun -ppassword
+```bash-4.2# mysql -uarun -p"password"
 mysql>
 ```
+
 
 I create a user named arun, grant all privileges, and quit. 
 Important: This step is required to log into MySQL from outside the container. The root user will not be able to log in from the host OS (Mac OS). Use % instead of localhost in arun@localhost.
